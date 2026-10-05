@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.test-tmp/
+*.egg-info/
+.venv/
+.env
+runs/
+data/cache/
+data/yahoo/
+data/dividends/

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "path": null,
+    "schedule_path": null,
+    "source": null,
+    "asset": null,
+    "timeframe": "1h",
+    "corporate_actions": null,
+    "volume_supported": null
+  },
+  "higher_data": null,
+  "backtest": {
+    "initial_cash": null,
+    "seed": 42,
+    "periods_per_year": null,
+    "daily_timezone": null,
+    "risk": {
+      "max_risk_per_trade_pct": 0.50,
+      "max_daily_loss_pct": 1.50,
+      "max_portfolio_drawdown_pct": 10.00,
+      "max_gross_exposure_pct": 100.00,
+      "max_positions": 1,
+      "allow_short": true
+    },
+    "execution": {
+      "commission_bps_per_side": null,
+      "slippage_bps_per_side": null,
+      "spread_bps": null,
+      "minimum_tick": null,
+      "quantity_increment": null,
+      "ambiguity_policy": "stop_first"
+    }
+  },
+  "features": {
+    "window": 24,
+    "short_window": 8,
+    "variance_ratio_horizon": 4,
+    "volume": true,
+    "regime": true,
+    "enabled": null,
+    "trend_r2_threshold": 0.30,
+    "high_vol_percentile": 0.75,
+    "transition_band": 0.05
+  },
+  "strategy": {
+    "stop_distance_pct": null,
+    "momentum_threshold": null,
+    "reversion_entry_z": null,
+    "reversion_exit_z": null,
+    "horizon_bars": null,
+    "target_r_multiple": null,
+    "trailing_stop_pct": null,
+    "stop_mode": "fixed_pct",
+    "volatility_stop_multiple": null
+  },
+  "random_agents": 100,
+  "output_root": "../runs"
+}

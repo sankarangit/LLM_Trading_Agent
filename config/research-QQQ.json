@@ -1,0 +1,83 @@
+{
+  "backtest": {
+    "daily_timezone": "America/New_York",
+    "execution": {
+      "ambiguity_policy": "stop_first",
+      "commission_bps_per_side": 1,
+      "minimum_tick": 0.01,
+      "quantity_increment": 1,
+      "slippage_bps_per_side": 2,
+      "spread_bps": 2
+    },
+    "initial_cash": 100000,
+    "periods_per_year": 252,
+    "risk": {
+      "allow_short": false,
+      "max_daily_loss_pct": 1.5,
+      "max_gross_exposure_pct": 100.0,
+      "max_portfolio_drawdown_pct": 10.0,
+      "max_positions": 1,
+      "max_risk_per_trade_pct": 0.5
+    },
+    "seed": 42
+  },
+  "data": {
+    "asset": "QQQ",
+    "corporate_actions": "Source-native split-consistent Yahoo OHLC; no scored-period splits; explicit entitlement on ex-date and payment-date close cash settlement; no automatic reinvestment. Event inputs archived.",
+    "path": "../data/yahoo/20261003T125830Z-5c0cf912/prepared-77c833b4/QQQ/daily.csv",
+    "schedule_path": "../data/yahoo/20261003T125830Z-5c0cf912/prepared-77c833b4/QQQ/daily_schedule.csv",
+    "source": "Yahoo Finance chart via yfinance",
+    "timeframe": "1d",
+    "volume_supported": true
+  },
+  "features": {
+    "enabled": null,
+    "high_vol_percentile": 0.75,
+    "regime": true,
+    "short_window": 8,
+    "transition_band": 0.05,
+    "trend_r2_threshold": 0.3,
+    "variance_ratio_horizon": 4,
+    "volume": true,
+    "window": 24
+  },
+  "higher_data": null,
+  "output_root": "../runs",
+  "random_agents": 100,
+  "strategy": {
+    "horizon_bars": null,
+    "momentum_threshold": 0.01,
+    "reversion_entry_z": 2,
+    "reversion_exit_z": 0.5,
+    "stop_distance_pct": 3,
+    "stop_mode": "fixed_pct",
+    "target_r_multiple": null,
+    "trailing_stop_pct": null,
+    "volatility_stop_multiple": null,
+    "momentum_horizon": 24,
+    "allow_short": false
+  },
+  "research": {
+    "start": "2005-01-01T00:00:00-05:00",
+    "end": "2014-12-31T23:59:59-05:00",
+    "holdout_start": "2024-01-01T00:00:00-05:00",
+    "warmup_bars": 50,
+    "role": "development",
+    "walk_forward_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "holdout_end": "2025-12-31T23:59:59-05:00"
+  },
+  "dividend_input": {
+    "path": "../data/dividends/20261003T133059Z/QQQ-development.json",
+    "sha256": "f06c71621648b5a9d49e891646c2daeaa7ac07c8a596ab641f079e273e7efeb4"
+  }
+}
